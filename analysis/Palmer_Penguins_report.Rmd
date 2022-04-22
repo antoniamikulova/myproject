@@ -1,0 +1,137 @@
+---
+title: "Palmer Penguins"
+author: "Antonia M."
+date: "22 4 2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+```
+
+## Palmer Penguins dataset
+
+This R Markdown document is connected to analysis of the Palmer Penguins dataset.
+In following pages, we will perform Principal Component Analysis in order to explore 
+various parameters, e.g. bill length and depth. Firstly, the dataset was loaded 
+to R Markdown and the structure of the datasets was examined.
+
+
+```{r dataset loading, echo = FALSE, warning=FALSE}
+library(ggplot2)
+library(palmerpenguins)
+data(package = 'palmerpenguins')
+str(penguins)
+
+```
+
+## Visualization of the penguin mass and flipper length correlation
+
+```{r mass vs flip len}
+mass_flipper <- ggplot(data = penguins, 
+                       aes(x = flipper_length_mm,
+                           y = body_mass_g)) +
+  geom_point(aes(color = species, 
+                 shape = species),
+             size = 3,
+             alpha = 0.8) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(title = "Penguin size, Palmer Station LTER",
+       subtitle = "Flipper length and body mass for Adelie, Chinstrap and Gentoo Penguins",
+       x = "Flipper length (mm)",
+       y = "Body mass (g)",
+       color = "Penguin species",
+       shape = "Penguin species") +
+  theme(legend.position = c(0.2, 0.7),
+        plot.title.position = "plot",
+        plot.caption = element_text(hjust = 0, face= "italic"),
+        plot.caption.position = "plot")
+
+mass_flipper
+```
+
+## Visualization of the flipper length vs bill length correlation 
+
+```{r flip vs bill length}
+flipper_bill <- ggplot(data = penguins,
+                         aes(x = flipper_length_mm,
+                             y = bill_length_mm)) +
+  geom_point(aes(color = species, 
+                 shape = species),
+             size = 3,
+             alpha = 0.8) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(title = "Flipper and bill length",
+       subtitle = "Dimensions for Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER",
+       x = "Flipper length (mm)",
+       y = "Bill length (mm)",
+       color = "Penguin species",
+       shape = "Penguin species") +
+  theme(legend.position = c(0.85, 0.15),
+        plot.title.position = "plot",
+        plot.caption = element_text(hjust = 0, face= "italic"),
+        plot.caption.position = "plot")
+
+flipper_bill
+```
+
+
+
+
+## Visualization of the bill length and depth correlation
+
+You can also embed plots, for example:
+
+```{r plot bill_len_dep, echo=FALSE, warning=FALSE}
+bill_len_dep <- ggplot(data = penguins,
+                         aes(x = bill_length_mm,
+                             y = bill_depth_mm,
+                             group = species)) +
+  geom_point(aes(color = species, 
+                 shape = species),
+             size = 3,
+             alpha = 0.8) +
+  geom_smooth(method = "lm", se = FALSE, aes(color = species)) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(title = "Penguin bill dimensions",
+       subtitle = "Bill length and depth for Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER",
+       x = "Bill length (mm)",
+       y = "Bill depth (mm)",
+       color = "Penguin species",
+       shape = "Penguin species") +
+  theme(legend.position = c(0.85, 0.15),
+        plot.title.position = "plot",
+        plot.caption = element_text(hjust = 0, face= "italic"),
+        plot.caption.position = "plot")
+
+bill_len_dep
+```
+
+Next, we perform the analysis of the Simpson's paradox. 
+
+## Simpson's Paradox visualization
+
+```{r simpson, warning=FALSE}
+bill_no_species <- ggplot(data = penguins,
+                         aes(x = bill_length_mm,
+                             y = bill_depth_mm)) +
+  geom_point() +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(title = "Penguin bill dimensions (omit species)",
+       subtitle = "Palmer Station LTER",
+       x = "Bill length (mm)",
+       y = "Bill depth (mm)") +
+  theme(plot.title.position = "plot",
+        plot.caption = element_text(hjust = 0, face= "italic"),
+        plot.caption.position = "plot") +
+  geom_smooth(method = "lm", se = FALSE, color = "gray50")
+
+bill_no_species
+```
+
+To conclude, here is the information about the session:
+
+```{r session info}
+sessionInfo()
+```
+
