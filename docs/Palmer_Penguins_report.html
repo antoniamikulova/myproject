@@ -9,9 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Antonia M." />
 
 
-<title>License</title>
+<title>Palmer Penguins</title>
 
 <script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,6 +30,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -234,6 +238,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -241,6 +308,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -284,7 +361,9 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">License</h1>
+<h1 class="title toc-ignore">Palmer Penguins</h1>
+<h4 class="author">Antonia M.</h4>
+<h4 class="date">22 4 2022</h4>
 
 </div>
 
@@ -312,7 +391,7 @@ $(document).ready(function () {
 <strong>Last updated:</strong> 2022-04-22
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong> <code>myproject/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
@@ -334,6 +413,66 @@ This reproducible <a href="https://rmarkdown.rstudio.com">R Markdown</a> analysi
 <div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
 <div class="panel-body">
 <p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+</p>
+</div>
+<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! The global environment was empty. Objects defined in the global environment can affect the analysis in your R Markdown file in unknown ways. For reproduciblity it’s best to always run the code in an empty environment.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20220422code"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Seed:</strong> <code>set.seed(20220422)</code> </a>
+</p>
+</div>
+<div id="strongSeedstrongcodesetseed20220422code" class="panel-collapse collapse">
+<div class="panel-body">
+<p>The command <code>set.seed(20220422)</code> was run prior to running the code in the R Markdown file. Setting a seed ensures that any results that rely on randomness, e.g. subsampling or permutations, are reproducible.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Session information:</strong> recorded </a>
+</p>
+</div>
+<div id="strongSessioninformationstrongrecorded" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Recording the operating system, R version, and package versions is critical for reproducibility.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be confident that you successfully produced the results during this run.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+</p>
+</div>
+<div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Using relative paths to the files within your workflowr project makes it easier to run your code on other machines.</p>
 </div>
 </div>
 </div>
@@ -376,7 +515,7 @@ Note that any generated files, e.g. HTML, png, CSS, etc., are not included in t
 <div id="versions" class="tab-pane fade">
 
 <p>
-These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/license.Rmd</code>) and HTML (<code>docs/license.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
+These are the previous versions of the repository in which changes were made to the R Markdown (<code>analysis/Palmer_Penguins_report.Rmd</code>) and HTML (<code>docs/Palmer_Penguins_report.html</code>) files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view the files as they were in that past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -402,44 +541,10 @@ Message
 <tbody>
 <tr>
 <td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/myproject/myproject/f788e0cb50fff59b9bf6ec0741d930c371c5ff3a/docs/license.html" target="_blank">f788e0c</a>
-</td>
-<td>
-antoniamikulova
-</td>
-<td>
-2022-04-22
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/myproject/myproject/246d8ffa1a196ce9f2dbf75b68ee1cc605f7919e/docs/license.html" target="_blank">246d8ff</a>
-</td>
-<td>
-antoniamikulova
-</td>
-<td>
-2022-04-22
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
 Rmd
 </td>
 <td>
-<a href="https://github.com/myproject/myproject/blob/4d03185e71eba7964432b9c05ac3ceb2ef2c4c45/analysis/license.Rmd" target="_blank">4d03185</a>
+<a href="https://github.com/myproject/myproject/blob/5280ba400f544461b85155e116666ace1dc15725/analysis/Palmer_Penguins_report.Rmd" target="_blank">5280ba4</a>
 </td>
 <td>
 antoniamikulova
@@ -448,7 +553,7 @@ antoniamikulova
 2022-04-22
 </td>
 <td>
-Start workflowr project.
+Publish the initial files for myproject
 </td>
 </tr>
 </tbody>
@@ -458,9 +563,116 @@ Start workflowr project.
 </div>
 </div>
 </div>
-<p>What license are you using for your code? See <a href="https://choosealicense.com/">choosealicense.com</a> for help deciding. It’s a convention to save a file <code>LICENSE</code> in the root of your Git repo that contains the license text.</p>
-<p>What license are you using for the written content on your site? It is traditional to choose a <a href="https://creativecommons.org/choose/">Creative Commons</a> license for this type of content.</p>
-<p>How should others cite your work? It’s a convention to save a file <code>CITATION</code> in the root of your Git repo that contains the citation information.</p>
+<div id="palmer-penguins-dataset" class="section level2">
+<h2>Palmer Penguins dataset</h2>
+<p>This R Markdown document is connected to analysis of the Palmer Penguins dataset. In following pages, we will perform Principal Component Analysis in order to explore various parameters, e.g. bill length and depth. Firstly, the dataset was loaded to R Markdown and the structure of the datasets was examined.</p>
+<pre><code>tibble [344 x 8] (S3: tbl_df/tbl/data.frame)
+ $ species          : Factor w/ 3 levels &quot;Adelie&quot;,&quot;Chinstrap&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
+ $ island           : Factor w/ 3 levels &quot;Biscoe&quot;,&quot;Dream&quot;,..: 3 3 3 3 3 3 3 3 3 3 ...
+ $ bill_length_mm   : num [1:344] 39.1 39.5 40.3 NA 36.7 39.3 38.9 39.2 34.1 42 ...
+ $ bill_depth_mm    : num [1:344] 18.7 17.4 18 NA 19.3 20.6 17.8 19.6 18.1 20.2 ...
+ $ flipper_length_mm: int [1:344] 181 186 195 NA 193 190 181 195 193 190 ...
+ $ body_mass_g      : int [1:344] 3750 3800 3250 NA 3450 3650 3625 4675 3475 4250 ...
+ $ sex              : Factor w/ 2 levels &quot;female&quot;,&quot;male&quot;: 2 1 1 NA 1 2 1 2 NA NA ...
+ $ year             : int [1:344] 2007 2007 2007 2007 2007 2007 2007 2007 2007 2007 ...</code></pre>
+</div>
+<div id="visualization-of-the-penguin-mass-and-flipper-length-correlation" class="section level2">
+<h2>Visualization of the penguin mass and flipper length correlation</h2>
+<p><img src="figure/Palmer_Penguins_report.Rmd/mass%20vs%20flip%20len-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="visualization-of-the-flipper-length-vs-bill-length-correlation" class="section level2">
+<h2>Visualization of the flipper length vs bill length correlation</h2>
+<p><img src="figure/Palmer_Penguins_report.Rmd/flip%20vs%20bill%20length-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="visualization-of-the-bill-length-and-depth-correlation" class="section level2">
+<h2>Visualization of the bill length and depth correlation</h2>
+<p>You can also embed plots, for example:</p>
+<pre><code>`geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="figure/Palmer_Penguins_report.Rmd/plot%20bill_len_dep-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Next, we perform the analysis of the Simpson’s paradox.</p>
+</div>
+<div id="simpsons-paradox-visualization" class="section level2">
+<h2>Simpson’s Paradox visualization</h2>
+<pre><code>`geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="figure/Palmer_Penguins_report.Rmd/simpson-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>To conclude, here is the information about the session:</p>
+<pre><code>R version 4.1.2 (2021-11-01)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 19044)
+
+Matrix products: default
+
+locale:
+[1] LC_COLLATE=Slovak_Slovakia.1250  LC_CTYPE=Slovak_Slovakia.1250   
+[3] LC_MONETARY=Slovak_Slovakia.1250 LC_NUMERIC=C                    
+[5] LC_TIME=Slovak_Slovakia.1250    
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] palmerpenguins_0.1.0 ggplot2_3.3.5        workflowr_1.7.0     
+
+loaded via a namespace (and not attached):
+ [1] tidyselect_1.1.2 xfun_0.30        bslib_0.3.1      purrr_0.3.4     
+ [5] lattice_0.20-45  splines_4.1.2    colorspace_2.0-3 vctrs_0.3.8     
+ [9] generics_0.1.2   htmltools_0.5.2  mgcv_1.8-38      yaml_2.3.5      
+[13] utf8_1.2.2       rlang_1.0.1      later_1.3.0      pillar_1.7.0    
+[17] jquerylib_0.1.4  withr_2.5.0      glue_1.4.2       DBI_1.1.2       
+[21] lifecycle_1.0.1  stringr_1.4.0    munsell_0.5.0    gtable_0.3.0    
+[25] evaluate_0.15    labeling_0.4.2   knitr_1.38       callr_3.7.0     
+[29] fastmap_1.1.0    httpuv_1.6.4     ps_1.6.0         fansi_1.0.2     
+[33] highr_0.9        Rcpp_1.0.8       promises_1.2.0.1 scales_1.1.1    
+[37] jsonlite_1.8.0   farver_2.1.0     fs_1.5.0         digest_0.6.29   
+[41] stringi_1.7.6    processx_3.5.2   dplyr_1.0.8      getPass_0.2-2   
+[45] rprojroot_2.0.3  grid_4.1.2       cli_3.1.0        tools_4.1.2     
+[49] magrittr_2.0.1   sass_0.4.1       tibble_3.1.6     crayon_1.5.1    
+[53] whisker_0.4      pkgconfig_2.0.3  Matrix_1.3-4     ellipsis_0.3.2  
+[57] assertthat_0.2.1 rmarkdown_2.13   httr_1.4.2       rstudioapi_0.13 
+[61] R6_2.5.1         nlme_3.1-153     git2r_0.30.1     compiler_4.1.2  </code></pre>
+<br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Session information
+</button>
+</p>
+<div id="workflowr-sessioninfo" class="collapse">
+<pre><code>R version 4.1.2 (2021-11-01)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 19044)
+
+Matrix products: default
+
+locale:
+[1] LC_COLLATE=Slovak_Slovakia.1250  LC_CTYPE=Slovak_Slovakia.1250   
+[3] LC_MONETARY=Slovak_Slovakia.1250 LC_NUMERIC=C                    
+[5] LC_TIME=Slovak_Slovakia.1250    
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] palmerpenguins_0.1.0 ggplot2_3.3.5        workflowr_1.7.0     
+
+loaded via a namespace (and not attached):
+ [1] tidyselect_1.1.2 xfun_0.30        bslib_0.3.1      purrr_0.3.4     
+ [5] lattice_0.20-45  splines_4.1.2    colorspace_2.0-3 vctrs_0.3.8     
+ [9] generics_0.1.2   htmltools_0.5.2  mgcv_1.8-38      yaml_2.3.5      
+[13] utf8_1.2.2       rlang_1.0.1      later_1.3.0      pillar_1.7.0    
+[17] jquerylib_0.1.4  withr_2.5.0      glue_1.4.2       DBI_1.1.2       
+[21] lifecycle_1.0.1  stringr_1.4.0    munsell_0.5.0    gtable_0.3.0    
+[25] evaluate_0.15    labeling_0.4.2   knitr_1.38       callr_3.7.0     
+[29] fastmap_1.1.0    httpuv_1.6.4     ps_1.6.0         fansi_1.0.2     
+[33] highr_0.9        Rcpp_1.0.8       promises_1.2.0.1 scales_1.1.1    
+[37] jsonlite_1.8.0   farver_2.1.0     fs_1.5.0         digest_0.6.29   
+[41] stringi_1.7.6    processx_3.5.2   dplyr_1.0.8      getPass_0.2-2   
+[45] rprojroot_2.0.3  grid_4.1.2       cli_3.1.0        tools_4.1.2     
+[49] magrittr_2.0.1   sass_0.4.1       tibble_3.1.6     crayon_1.5.1    
+[53] whisker_0.4      pkgconfig_2.0.3  Matrix_1.3-4     ellipsis_0.3.2  
+[57] assertthat_0.2.1 rmarkdown_2.13   httr_1.4.2       rstudioapi_0.13 
+[61] R6_2.5.1         nlme_3.1-153     git2r_0.30.1     compiler_4.1.2  </code></pre>
+</div>
+</div>
 
 
 <!-- Adjust MathJax settings so that all math formulae are shown using
@@ -478,6 +690,8 @@ footer is added to webpages before the MathJax javascript. -->
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -510,6 +724,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
